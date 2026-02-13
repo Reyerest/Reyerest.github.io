@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京非遗美食 - 美食图鉴</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", Arial, sans-serif;
+        }
+        body {
+            background-color: #F5EFE0;
+            color: #3A2618;
+        }
+        /* 导航栏样式 */
+        .nav {
+            background-color: #C02E28;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .nav a:hover {
+            color: #F5EFE0;
+            text-decoration: underline;
+        }
+        /* 美食图鉴板块 */
+        .food-section {
+            padding: 60px 100px;
+        }
+        .food-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #C02E28;
+            position: relative;
+        }
+        .food-section h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #C02E28;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .food-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .food-card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .food-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .food-card h3 {
+            color: #C02E28;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+        .food-card .eng-title {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        .food-card .food-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .food-card .content {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .food-card .content strong {
+            color: #C02E28;
+        }
+        .qrcode {
+            text-align: center;
+        }
+        .qrcode .qrcode-img {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            border: 2px solid #F5EFE0;
+            border-radius: 8px;
+            padding: 5px;
+        }
+        .qrcode p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3A2618;
+            color: white;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .food-cards {
+                grid-template-columns: 1fr;
+            }
+            .food-section {
+                padding: 30px 20px;
+            }
+            .food-section h2 {
+                font-size: 28px;
+            }
+            .food-card h3 {
+                font-size: 22px;
+            }
+            .nav a {
+                margin: 0 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="food.html">Food Heritage</a>
+        <a href="#about">About Us</a>
+    </div>
+
+    <!-- 非遗美食图鉴板块 -->
+    <div class="food-section">
+        <h2>北京非遗美食图鉴</h2>
+        <div class="food-cards">
+            <!-- 1. 全聚德挂炉烤鸭 -->
+            <div class="food-card">
+                <h3>全聚德挂炉烤鸭</h3>
+                <p class="eng-title">Quanjude Roast Duck: Imperial Ritual Taste of Beijing (Hanging Oven Style)</p>
+                <img src="./images/duck-quanjude.jpg" alt="全聚德挂炉烤鸭" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>挂炉明火烤制，选用北京填鸭，片鸭108刀，皮脆肉嫩，烤制过程不封炉，靠果木香气提味。</p>
+                    <p><strong>Core Craft:</strong> Roasted in a hanging oven with an open flame, using Beijing Peking duck, sliced into 108 pieces with crispy skin and tender meat. The oven is not sealed during roasting, flavored with fruit wood aroma.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1864年，是国宴经典，代表北京都城宴请的礼制文化，成为中国美食的国际符号。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1864, it is a classic state banquet dish, representing the ritual culture of imperial Beijing's banquets and becoming an international symbol of Chinese cuisine.</p>
+                </div>
+                <div class="qrcode">
+                    <img src="./images/qrcode-duck.jpg" alt="烤鸭视频二维码" class="qrcode-img">
+                    <p>扫码观看：全聚德烤鸭非遗技艺讲解</p>
+                    <p>Scan to watch: Intangible Heritage Craft of Quanjude Roast Duck</p>
+                </div>
+            </div>
+
+            <!-- 2. 便宜坊焖炉烤鸭 -->
+            <div class="food-card">
+                <h3>便宜坊焖炉烤鸭</h3>
+                <p class="eng-title">Bianyifang Roast Duck: Ming-Qing Royal Sealed Freshness (Closed Oven Style)</p>
+                <img src="./images/duck-bianyifang.jpg" alt="便宜坊焖炉烤鸭" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>焖炉密封烤制，以炉壁余温烘烤，鸭肉嫩而不柴，油脂锁于肉中，口感温润。</p>
+                    <p><strong>Core Craft:</strong> Roasted in a sealed oven with residual heat from the furnace wall, the duck meat is tender but not dry, with fat locked in the meat for a moist taste.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>焖炉技艺源于明代，距今超600年，是北京烤鸭的鼻祖，见证了明清宫廷饮食的演变。</p>
+                    <p><strong>Cultural Core:</strong> The closed oven craft originated in the Ming Dynasty, over 600 years ago, as the ancestor of Beijing roast duck, witnessing the evolution of Ming and Qing imperial cuisine.</p>
+                </div>
+                <div class="qrcode">
+                    <img src="./images/qrcode-bianyifang.jpg" alt="便宜坊烤鸭二维码" class="qrcode-img">
+                    <p>扫码观看：便宜坊烤鸭非遗技艺讲解</p>
+                    <p>Scan to watch: Intangible Heritage Craft of Bianyifang Roast Duck</p>
+                </div>
+            </div>
+
+            <!-- 3. 东来顺涮羊肉 -->
+            <div class="food-card">
+                <h3>东来顺涮羊肉</h3>
+                <p class="eng-title">Donglaishun Hot Pot: Grassland-Meets-Capital Taste (Mongolian Hot Pot with Lamb)</p>
+                <img src="./images/hotpot-donglaishun.jpg" alt="东来顺涮羊肉" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>选用内蒙古苏尼特羊，羊肉切片薄如纸，清水锅底配葱姜，涮肉“七上八下”即熟，鲜而不膻。</p>
+                    <p><strong>Core Craft:</strong> Using Inner Mongolia Sunit sheep, the lamb slices are as thin as paper, boiled in a clear soup base with green onions and ginger, blanched for a short time until cooked, fresh and non-greasy.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>草原文明与都城饮食的融合，铜锅涮肉成为老北京冬日饮食的代表，承载着市井团圆的记忆。</p>
+                    <p><strong>Cultural Core:</strong> Integration of grassland civilization and capital cuisine, copper pot hot pot with lamb is a representative of old Beijing's winter diet, carrying memories of folk reunion.</p>
+                </div>
+                <div class="qrcode">
+                    <img src="./images/qrcode-donglaishun.jpg" alt="东来顺涮羊肉二维码" class="qrcode-img">
+                    <p>扫码观看：东来顺涮羊肉非遗技艺讲解</p>
+                    <p>Scan to watch: Intangible Heritage Craft of Donglaishun Hot Pot</p>
+                </div>
+            </div>
+
+            <!-- 4. 月盛斋酱烧牛羊肉 -->
+            <div class="food-card">
+                <h3>月盛斋酱烧牛羊肉</h3>
+                <p class="eng-title">Yueshengzhai Braised Meat: 300-Year Broth Heritage (From Royal Tribute to Folk Delicacy)</p>
+                <img src="./images/meat-yueshengzhai.jpg" alt="月盛斋酱烧牛羊肉" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>采用300年循环老汤卤制，加入二十余种香料，文火慢炖数小时，肉质酥烂入味，色泽红亮。</p>
+                    <p><strong>Core Craft:</strong> Braised in a 300-year recycled old soup with more than 20 spices, simmered on low heat for hours, the meat is tender and flavorful with a bright red color.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1775年，原为宫廷贡品，后走入民间，是北京清真美食的代表，体现多民族饮食文化融合。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1775, it was originally a royal tribute and later became a folk delicacy, representing Beijing's halal cuisine and reflecting the integration of multi-ethnic dietary cultures.</p>
+                </div>
+                <div class="qrcode">
+                    <img src="./images/qrcode-yueshengzhai.jpg" alt="月盛斋酱烧牛羊肉二维码" class="qrcode-img">
+                    <p>扫码观看：月盛斋酱烧牛羊肉非遗技艺讲解</p>
+                    <p>Scan to watch: Intangible Heritage Craft of Yueshengzhai Braised Meat</p>
+                </div>
+            </div>
+
+            <!-- 5. 天福号酱肘子 -->
+            <div class="food-card">
+                <h3>天福号酱肘子</h3>
+                <p class="eng-title">Tianfuhao Braised Pork Shank: Capital Folk Craftsmanship (Named by Empress Dowager Cixi)</p>
+                <img src="./images/pork-tianfuhao.jpg" alt="天福号酱肘子" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>选用猪前肘，经焯水、炒糖色、卤制等十余道工序，老汤慢炖至骨肉分离，肥而不腻。</p>
+                    <p><strong>Core Craft:</strong> Using pork front shank, through more than ten processes such as blanching, caramelizing sugar, and braising, simmered in old soup until the meat is tender enough to separate from the bone, rich but not greasy.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1738年，因慈禧赐名而声名远扬，是老北京卤味的代表，承载着都城市井的饮食匠心。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1738, it became famous after being named by Empress Dowager Cixi, representing old Beijing's braised food and carrying the culinary craftsmanship of the capital's folk society.</p>
+                </div>
+                <div class="qrcode">
+                    <img src="./images/qrcode-tianfuhao.jpg" alt="天福号酱肘子二维码" class="qrcode-img">
+                    <p>扫码观看：天福号酱肘子非遗技艺讲解</p>
+                    <p>Scan to watch: Intangible Heritage Craft of Tianfuhao Braised Pork Shank</p>
+                </div>
+            </div>
+
+            <!-- 6. 六必居酱菜 -->
+            <div class="food-card">
+                <h3>六必居酱菜</h3>
+                <p class="eng-title">Liubiju Pickles: Capital Folk Seasonal Taste (600-Year Sun-Moon Fermentation)</p>
+                <img src="./images/pickles-liubiju.jpg" alt="六必居酱菜" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>遵循“六必”古训，采用“日晒夜露”自然发酵工艺，酱菜脆爽咸香，保质期长且风味独特。</p>
+                    <p><strong>Core Craft:</strong> Following the ancient "Six Essentials" maxim, using natural fermentation with sun exposure and night dew, the pickles are crisp, salty and fragrant, with a long shelf life and unique flavor.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1530年，600年传承，是老北京百姓的“四季味觉”，见证了都城市井饮食的日常。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1530, with 600 years of inheritance, it is the "seasonal taste" of old Beijing's people, witnessing the daily life of the capital's folk diet.</p>
+                </div>
+                <div class="qrcode">
+                    <img src="./images/qrcode-liubiju.jpg" alt="六必居酱菜二维码" class="qrcode-img">
+                    <p>扫码观看：六必居酱菜非遗技艺讲解</p>
+                    <p>Scan to watch: Intangible Heritage Craft of Liubiju Pickles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        北京语言大学2026年“返家乡”寒假社会实践成果 © 2026
+    </div>
+</body>
+</html>
