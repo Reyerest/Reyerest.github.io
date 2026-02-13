@@ -74,6 +74,33 @@
             background-color: #a02520;
             transform: translateY(-3px);
         }
+        /* About Us板块 */
+        .about-section {
+            padding: 60px 100px;
+            background-color: white;
+            margin: 50px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .about-section h2 {
+            color: #C02E28;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .about-team {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .about-team p {
+            margin-bottom: 10px;
+        }
+        .about-team strong {
+            color: #C02E28;
+        }
         /* 底部版权 */
         .footer {
             text-align: center;
@@ -98,6 +125,12 @@
                 margin: 0 10px;
                 font-size: 16px;
             }
+            .about-section {
+                padding: 30px 20px;
+            }
+            .about-section h2 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
@@ -114,6 +147,17 @@
         <h1>谁说北京是美食荒漠？非遗美食里藏着800年都城味觉史</h1>
         <p>Is Beijing a Food Desert? 800 Years of Imperial Taste in Intangible Cultural Heritage Cuisine</p>
         <button onclick="location.href='food.html'">探索非遗美食</button>
+    </div>
+
+    <!-- About Us板块 -->
+    <div class="about-section" id="about">
+        <h2>About Us / 团队简介</h2>
+        <div class="about-team">
+            <p><strong>团队名称</strong>：北语“守艺都城・味达世界”——北京非遗美食数字化全景式国际传播实践小队</p>
+            <p><strong>团队构成</strong>：由北京语言大学4名本地学子组成，涵盖英语翻译、汉学等专业，兼具中英双语优势与本土文化情怀。</p>
+            <p><strong>实践初衷</strong>：聚焦北京13项饮食类非遗技艺，填补国家非遗官网多语传播空白，打破“北京美食荒漠”刻板印象，让家乡的非遗美食走出家门、走向世界。</p>
+            <p><strong>实践目标</strong>：通过实地调研、双语创作、数字化搭建，系统梳理北京二锅头酿造、张一元花茶制作、全聚德烤鸭等13项非遗技艺，打造可公开访问的中英双语展示平台，助力非遗文化的活态传承与国际传播。</p>
+        </div>
     </div>
 
     <!-- 底部 -->

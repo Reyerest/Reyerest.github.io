@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京非遗美食 - 美食图鉴</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", Arial, sans-serif;
+        }
+        body {
+            background-color: #F5EFE0;
+            color: #3A2618;
+        }
+        /* 导航栏样式 */
+        .nav {
+            background-color: #C02E28;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .nav a:hover {
+            color: #F5EFE0;
+            text-decoration: underline;
+        }
+        /* 美食图鉴板块 */
+        .food-section {
+            padding: 60px 100px;
+        }
+        .food-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #C02E28;
+            position: relative;
+        }
+        .food-section h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #C02E28;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .food-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .food-card {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .food-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .food-card h3 {
+            color: #C02E28;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+        .food-card .eng-title {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        .food-card .food-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .food-card .content {
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .food-card .content strong {
+            color: #C02E28;
+        }
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3A2618;
+            color: white;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .food-cards {
+                grid-template-columns: 1fr;
+            }
+            .food-section {
+                padding: 30px 20px;
+            }
+            .food-section h2 {
+                font-size: 28px;
+            }
+            .food-card h3 {
+                font-size: 22px;
+            }
+            .nav a {
+                margin: 0 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="food.html">Food Heritage</a>
+        <a href="index.html#about">About Us</a>
+    </div>
+
+    <!-- 非遗美食图鉴板块 -->
+    <div class="food-section">
+        <h2>北京非遗美食图鉴</h2>
+        <div class="food-cards">
+            <!-- 1. 北京二锅头酒传统酿造技艺 -->
+            <div class="food-card">
+                <h3>北京二锅头酒传统酿造技艺</h3>
+                <p class="eng-title">Traditional Brewing Technique of Beijing Erguotou Liquor (Distilled Wine)</p>
+                <img src="./images/erguotou.jpg" alt="北京二锅头酒传统酿造技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>采用“老五甑发酵、混蒸混烧”工艺，截取酒甑中第二次蒸馏的“二锅头”酒液，酒质清澈、绵甜爽净，度数精准把控。</p>
+                    <p><strong>Core Craft:</strong> Using "Laowuzeng fermentation and mixed steaming/burning" process, extracting the second distilled liquor from the steamer, with clear, mellow and refreshing taste and precise alcohol content control.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于清康熙年间，源昇号为技艺鼻祖，是北京平民酒文化的代表，见证都城市井生活的烟火气。</p>
+                    <p><strong>Cultural Core:</strong> Originated in the Kangxi period of the Qing Dynasty, Yuanshenghao is the ancestor of the craft, representing Beijing's civilian wine culture and witnessing the daily life of the capital.</p>
+                </div>
+            </div>
+
+            <!-- 2. 张一元茉莉花茶制作技艺 -->
+            <div class="food-card">
+                <h3>张一元茉莉花茶制作技艺</h3>
+                <p class="eng-title">Jasmine Tea Making Technique of Zhang Yiyuan (Flower Tea)</p>
+                <img src="./images/zhangyiyuan.jpg" alt="张一元茉莉花茶制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>采用“七窨一提”传统窨制工艺，精选福建茉莉与浙江绿茶，层层吸附花香，茶味与花香交融，香气持久。</p>
+                    <p><strong>Core Craft:</strong> Using the traditional "seven scenting and one lifting" process, selecting Fujian jasmine and Zhejiang green tea, absorbing floral fragrance layer by layer, with blended tea and floral flavor and lasting aroma.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1900年，是北京花茶文化的标杆，体现南北物产融合与老北京的茶饮审美。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1900, it is a benchmark of Beijing flower tea culture, reflecting the integration of north-south products and the tea drinking aesthetics of old Beijing.</p>
+                </div>
+            </div>
+
+            <!-- 3. 王致和腐乳酿造技艺 -->
+            <div class="food-card">
+                <h3>王致和腐乳酿造技艺</h3>
+                <p class="eng-title">Fermented Bean Curd Brewing Technique of Wang Zhihe</p>
+                <img src="./images/wangzhihe.jpg" alt="王致和腐乳酿造技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>采用“前酵后熟”工艺，豆腐经霉菌发酵、加酒密封腌制，历时数月形成红腐乳的绵密口感与独特酱香。</p>
+                    <p><strong>Core Craft:</strong> Using "pre-fermentation and post-ripening" process, tofu is fermented with molds, marinated with wine and sealed, forming the soft texture and unique sauce aroma of red fermented bean curd after several months.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1669年，“臭中有香”的风味成为老北京佐餐经典，是中式发酵技艺的活化石。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1669, the "fragrant in stench" flavor is a classic side dish of old Beijing, and a living fossil of Chinese fermentation techniques.</p>
+                </div>
+            </div>
+
+            <!-- 4. 六必居酱菜制作技艺 -->
+            <div class="food-card">
+                <h3>六必居酱菜制作技艺</h3>
+                <p class="eng-title">Pickles Making Technique of Liubiju</p>
+                <img src="./images/liubiju.jpg" alt="六必居酱菜制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>遵循“六必”古训，采用“日晒夜露”自然发酵工艺，酱菜脆爽咸香，保质期长且风味独特。</p>
+                    <p><strong>Core Craft:</strong> Following the ancient "Six Essentials" maxim, using natural fermentation with sun exposure and night dew, the pickles are crisp, salty and fragrant, with a long shelf life and unique flavor.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1530年，600年传承，是老北京百姓的“四季味觉”，见证都城市井饮食日常。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1530, with 600 years of inheritance, it is the "seasonal taste" of old Beijing's people, witnessing the daily diet of the capital's folk society.</p>
+                </div>
+            </div>
+
+            <!-- 5. 全聚德挂炉烤鸭技艺 -->
+            <div class="food-card">
+                <h3>全聚德挂炉烤鸭技艺</h3>
+                <p class="eng-title">Roast Duck Technique of Quanjude (Hanging Oven Style)</p>
+                <img src="./images/quanjude.jpg" alt="全聚德挂炉烤鸭技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>挂炉明火烤制，选用北京填鸭，片鸭108刀，皮脆肉嫩，烤制过程不封炉，靠果木香气提味。</p>
+                    <p><strong>Core Craft:</strong> Roasted in a hanging oven with open flame, using Beijing Peking duck, sliced into 108 pieces with crispy skin and tender meat, flavored with fruit wood aroma.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1864年，国宴经典，是中国美食的国际符号，代表北京都城宴请的礼制文化。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1864, a classic state banquet dish, an international symbol of Chinese cuisine, representing the ritual culture of imperial Beijing's banquets.</p>
+                </div>
+            </div>
+
+            <!-- 6. 便宜坊焖炉烤鸭技艺 -->
+            <div class="food-card">
+                <h3>便宜坊焖炉烤鸭技艺</h3>
+                <p class="eng-title">Roast Duck Technique of Bianyifang (Closed Oven Style)</p>
+                <img src="./images/bianyifang.jpg" alt="便宜坊焖炉烤鸭技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>焖炉密封烤制，以炉壁余温烘烤，鸭肉嫩而不柴，油脂锁于肉中，口感温润无明火焦香。</p>
+                    <p><strong>Core Craft:</strong> Roasted in a sealed oven with residual heat from the furnace wall, the duck meat is tender but not dry, with fat locked in the meat and a moist taste without open flame char aroma.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>源于明代，超600年历史，是北京烤鸭的鼻祖，见证明清宫廷饮食的演变。</p>
+                    <p><strong>Cultural Core:</strong> Originated in the Ming Dynasty, over 600 years of history, the ancestor of Beijing roast duck, witnessing the evolution of Ming and Qing imperial cuisine.</p>
+                </div>
+            </div>
+
+            <!-- 7. 东来顺涮羊肉制作技艺 -->
+            <div class="food-card">
+                <h3>东来顺涮羊肉制作技艺</h3>
+                <p class="eng-title">Hot Pot Lamb Technique of Donglaishun (Boiled Lamb)</p>
+                <img src="./images/donglaishun.jpg" alt="东来顺涮羊肉制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>选用内蒙古苏尼特羊，羊肉切片薄如纸，清水锅底配葱姜，涮肉“七上八下”即熟，鲜而不膻。</p>
+                    <p><strong>Core Craft:</strong> Using Inner Mongolia Sunit sheep, lamb slices as thin as paper, boiled in clear soup with green onions and ginger, blanched briefly until cooked, fresh and non-greasy.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>草原文明与都城饮食融合，铜锅涮肉是老北京冬日饮食代表，承载市井团圆记忆。</p>
+                    <p><strong>Cultural Core:</strong> Integration of grassland civilization and capital cuisine, copper pot hot pot with lamb represents old Beijing's winter diet, carrying memories of folk reunion.</p>
+                </div>
+            </div>
+
+            <!-- 8. 月盛斋酱烧牛羊肉制作技艺 -->
+            <div class="food-card">
+                <h3>月盛斋酱烧牛羊肉制作技艺</h3>
+                <p class="eng-title">Braised Beef & Lamb Technique of Yueshengzhai</p>
+                <img src="./images/yueshengzhai.jpg" alt="月盛斋酱烧牛羊肉制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>采用300年循环老汤卤制，加入二十余种香料，文火慢炖数小时，肉质酥烂入味，色泽红亮。</p>
+                    <p><strong>Core Craft:</strong> Braised in 300-year recycled old soup with over 20 spices, simmered on low heat for hours, meat is tender and flavorful with bright red color.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1775年，原为宫廷贡品，后走入民间，是北京清真美食的代表，体现多民族饮食融合。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1775, originally a royal tribute, later a folk delicacy, representing Beijing's halal cuisine and multi-ethnic dietary integration.</p>
+                </div>
+            </div>
+
+            <!-- 9. 北京烤肉制作技艺 -->
+            <div class="food-card">
+                <h3>北京烤肉制作技艺</h3>
+                <p class="eng-title">Beijing Roast Meat Making Technique (Grilled Meat)</p>
+                <img src="./images/beijingkaorou.jpg" alt="北京烤肉制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>选用鲜牛羊肉，切薄片腌制，以炙子（铸铁烤盘）明火烤制，边烤边拌，肉香焦脆，搭配葱花香菜提味。</p>
+                    <p><strong>Core Craft:</strong> Using fresh beef/lamb, sliced and marinated, grilled on cast iron plate over open flame, stirred while grilling, with crispy meat aroma and scallion/coriander flavor.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>源于满族烤肉习俗，后融入汉民饮食，是老北京“围炉烤肉”市井文化的鲜活体现。</p>
+                    <p><strong>Cultural Core:</strong> Originated from Manchu roast meat customs, integrated into Han diet, a vivid embodiment of old Beijing's "grilling meat around stove" folk culture.</p>
+                </div>
+            </div>
+
+            <!-- 10. 天福号酱肘子制作技艺 -->
+            <div class="food-card">
+                <h3>天福号酱肘子制作技艺</h3>
+                <p class="eng-title">Braised Pork Shank Technique of Tianfuhao</p>
+                <img src="./images/tianfuhao.jpg" alt="天福号酱肘子制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>选用猪前肘，经焯水、炒糖色、卤制等十余道工序，老汤慢炖至骨肉分离，肥而不腻，咸甜适口。</p>
+                    <p><strong>Core Craft:</strong> Using pork front shank, through blanching, caramelizing sugar, braising etc., simmered in old soup until meat separates from bone, rich but not greasy, salty and sweet taste.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1738年，慈禧赐名，老北京卤味代表，承载都城市井饮食的匠心。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1738, named by Empress Dowager Cixi, representative of old Beijing's braised food, carrying the craftsmanship of capital's folk diet.</p>
+                </div>
+            </div>
+
+            <!-- 11. 都一处烧麦制作技艺 -->
+            <div class="food-card">
+                <h3>都一处烧麦制作技艺</h3>
+                <p class="eng-title">Shaomai (Steamed Dumplings) Making Technique of Duyichu</p>
+                <img src="./images/duyichu.jpg" alt="都一处烧麦制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>烧麦皮采用“走槌”擀制，薄如蝉翼且边缘呈荷叶状，馅料选鲜羊肉/三鲜，捏褶精准，蒸制后形如石榴。</p>
+                    <p><strong>Core Craft:</strong> Shaomai skin rolled with "walking mallet", thin as cicada's wing with lotus leaf edge, filling with fresh lamb/three delicacies, precisely pleated, shaped like pomegranate after steaming.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>始于1738年，因乾隆赐名成名，是老北京前门小吃的代表，体现都城小吃的精致匠心。</p>
+                    <p><strong>Cultural Core:</strong> Founded in 1738, famous for Qianlong's naming, representative of old Beijing's Qianmen snacks, reflecting the exquisite craftsmanship of capital snacks.</p>
+                </div>
+            </div>
+
+            <!-- 12. 仿膳（清廷御膳）制作技艺 -->
+            <div class="food-card">
+                <h3>仿膳（清廷御膳）制作技艺</h3>
+                <p class="eng-title">Fangshan (Qing Imperial Cuisine) Making Technique</p>
+                <img src="./images/fangshan.jpg" alt="仿膳（清廷御膳）制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>复刻清廷御膳工艺，菜品讲究“色、香、味、形、器”俱全，代表菜品有豌豆黄、芸豆卷、宫廷糕点等，工序繁复。</p>
+                    <p><strong>Core Craft:</strong> Replicating Qing imperial cuisine process, dishes emphasize "color, aroma, taste, shape, utensil", representative dishes include pea cake, kidney bean roll, imperial pastries, with complicated procedures.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>传承宫廷饮食礼制，是北京皇家饮食文化的活态延续，体现都城饮食的等级与精致。</p>
+                    <p><strong>Cultural Core:</strong> Inheriting imperial dietary rituals, a living continuation of Beijing's royal dietary culture, reflecting the hierarchy and exquisiteness of capital cuisine.</p>
+                </div>
+            </div>
+
+            <!-- 13. 北京果脯传统制作技艺 -->
+            <div class="food-card">
+                <h3>北京果脯传统制作技艺</h3>
+                <p class="eng-title">Traditional Making Technique of Beijing Preserved Fruits</p>
+                <img src="./images/guopu.jpg" alt="北京果脯传统制作技艺" class="food-img">
+                <div class="content">
+                    <p><strong>技艺核心：</strong>选用北京本地鲜果（杏、桃、海棠等），经去皮、去核、糖渍、烘干等工序，保留果肉原味，甜而不腻。</p>
+                    <p><strong>Core Craft:</strong> Using local fresh fruits (apricot, peach, crabapple etc.), through peeling, stoning, sugar marinating, drying, retaining fruit original taste, sweet but not greasy.</p>
+                    <br>
+                    <p><strong>文化内核：</strong>源于宫廷蜜饯，后走入民间，是老北京特色小吃，体现北方果制品的制作智慧。</p>
+                    <p><strong>Cultural Core:</strong> Originated from imperial preserved fruits, later a folk snack, representative of old Beijing's specialty snacks, reflecting the production wisdom of northern fruit products.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        北京语言大学2026年“返家乡”寒假社会实践成果 © 2026
+    </div>
+</body>
+</html>
